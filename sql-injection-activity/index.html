@@ -7,14 +7,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
-    
+
 </head>
 <body>
     <form class="box" action="index.html" method="post">
-        <h1>Login</h1>
-        <input type="text" name="" placeholder="Enter username" id="userName">
-        <input type="text" name="" placeholder="Enter username" id="userName">
-        <input type="submit" name="" value="Login">
+        <div class="container">
+        <h1>D-ATK</h1>
+        <input type="text" name="" placeholder="Enter username" id="userName" required>
+        <input type="text" name="" placeholder="Enter username" id="userName"required>
+        <button type="submit">Login</button>
+        </div>
+
+        <script>
+            if(document.location.hash === '#unauthorized') {
+         document.write('<div class=â€œunauthorizedâ€>Invalid Username or Password</div>');
+            } else if(document.location.hash === '#error') {
+         document.write('<div class=â€œerrorâ€>An error has occured</div>');
+            }
+          </script>
+         
 
     </form>
 </body>
